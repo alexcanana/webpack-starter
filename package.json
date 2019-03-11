@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --open",
+    "prod": "cross-env NODE_ENV=production webpack --progress --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.0",
+    "cross-env": "^5.1",
+    "css-loader": "^0.28.10",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^3.0.6",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss": "^6.0.19",
+    "postcss-loader": "^2.1.1",
+    "purgecss-webpack-plugin": "^1.4.0",
+    "sass": "^1.17.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.20.3",
+    "tailwindcss": ">=0.6.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "webpack-notifier": "^1.7.0"
+  }
+}
