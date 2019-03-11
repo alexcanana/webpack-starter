@@ -22,9 +22,9 @@
     "style-loader": "^0.20.3",
     "tailwindcss": ">=0.6.5",
     "webpack": "^4.29.6",
+    "webpack-build-notifier": "^0.1.30",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
-    "webpack-merge": "^4.2.1",
-    "webpack-notifier": "^1.7.0"
+    "webpack-merge": "^4.2.1"
   }
 }
