@@ -1,5 +1,12 @@
 {
-  "private": true,
+  "name": "webpack-starter",
+  "description": "Personal Webpack starter setup for using ES6, Sass, PostCSS, Tailwind CSS.",
+  "version": "1.0",
+  "author": "Alex Canana <alexandre.canana@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexcanana/webpack-starter"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --open",
     "prod": "cross-env NODE_ENV=production webpack --progress --config webpack.prod.js"
