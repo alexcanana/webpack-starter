@@ -49,7 +49,7 @@ yarn prod
 
 After that you will have a ready to deploy bundle at `/dist`.
 
-Javascript and CSS files will be minified and striped from unused elements.
+Javascript and CSS files will be minified and stripped from unused elements.
 
 ## Additonal info
 Make sure to check `postcss.config.js` and `.babelrc` for more information about PostCSS and Babel's configuration.
