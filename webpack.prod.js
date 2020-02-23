@@ -7,6 +7,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const common = require('./webpack.config.js');
 
+const purgeFromTailwind = content => content.match(/[\w-/:]+(?<!:)/g) || [];
+
 module.exports = merge(common, {
   mode: 'production',
 
@@ -16,7 +18,13 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
 
     new PurgeCssPlugin({
-      paths: glob.sync(`${path.resolve(__dirname, 'src')}/**/*`, { nodir: true })
+      paths: glob.sync(`${path.resolve(__dirname, 'src')}/**/*`, { nodir: true }),
+      extractors: [
+        {
+          extractor: purgeFromTailwind,
+          extensions: ['html', 'js']
+        },
+      ]
     }),
 
     new HtmlWebpackPlugin({
