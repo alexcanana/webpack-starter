@@ -1,7 +1,7 @@
 {
   "name": "webpack-starter",
   "description": "Personal Webpack starter setup for using ES6, Sass, PostCSS, Tailwind CSS.",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Alex Canana <alexandre.canana@gmail.com>",
   "repository": {
     "type": "git",
