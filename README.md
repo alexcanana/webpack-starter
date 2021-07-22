@@ -8,23 +8,23 @@ This is my personal Webpack starter setup for using:
 
 To get started, clone the project and install the dependencies:
 
-```
+```sh
 # Using npm
-npm install
+npm ci
 
 # Using Yarn
-yarn
+yarn install --frozen-lockfile
 ```
 
 ## Webpack development server
 To start up a Webpack Development Server, run the following command:
 
-```
+```sh
 # Using npm
-npm run dev
+npm start
 
 # Using Yarn
-yarn dev
+yarn run start
 ```
 
 Webpack Development Server will watch:
