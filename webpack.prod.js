@@ -1,7 +1,6 @@
 const glob                   = require('glob');
 const path                   = require('path');
 const merge                  = require('webpack-merge');
-const PurgeCssPlugin         = require('purgecss-webpack-plugin');
 const HtmlWebpackPlugin      = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -17,14 +16,8 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
 
-    new PurgeCssPlugin({
-      paths: glob.sync(`${path.resolve(__dirname, 'src')}/**/*`, { nodir: true }),
-      extractors: [
-        {
-          extractor: purgeFromTailwind,
-          extensions: ['html', 'js']
-        },
-      ]
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash].min.css'
     }),
 
     new HtmlWebpackPlugin({

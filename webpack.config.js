@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin          = require('html-webpack-plugin');
 const MiniCssExtractPlugin       = require('mini-css-extract-plugin');
-const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 const env = process.env.NODE_ENV;
 
@@ -11,7 +10,7 @@ module.exports = {
 
   output: {
     publicPath: '/',
-    filename: env === 'development' ? 'js/bundle.js' : 'js/bundle.[contenthash].min.js',
+    filename: env === 'development' ? 'js/[name].js' : 'js/bundle.[contenthash].min.js',
     chunkFilename: env === 'development' ? 'js/[name].js' : 'js/[name].[contenthash].min.js'
   },
 
@@ -45,12 +44,6 @@ module.exports = {
   },
 
   plugins: [
-    new WebpackBuildNotifierPlugin(),
-
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].min.css'
-    }),
-
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/html/index.html'
